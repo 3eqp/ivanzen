@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ivan Zenkovich – Digital Designer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="videoCursorPopup">
+    <div class="popupVideo-wrapper">
+      <button class="showreel-stop">
+        <span class="button-label">Stop</span>
+      </button>
+      <video class="hero__popupVideo" width="100%" playsinline onended="videoEnd()">
+        <source src="https://www.dropbox.com/s/6mafgvrdvxy8vqs/TempVid.mp4?raw=1" type="video/mp4">
+      </video>
+
+    </div>
+  </div>
+  <div class="screenOverlay"></div>
+
+  <div class="hero__container">
+    <div class="hero__text-wrapper">
+      <div class="hero-text">
+        <span>I</span>
+        <span>V</span>
+        <span class="collapse">A</span>
+        <span>N</span>
+      </div>
+      <div class="hero-text">
+        <span>Z</span>
+        <span class="collapse">E</span>
+        <span>N</span>
+      </div>
+    </div>
+    <div class="hero__about-wrapper">
+      <div class="hero__about-text">digital designer<br>from belarus</div>
+      <div class="hero__about-text">
+        cpo <a href="#">@skich</a>
+        <br>
+        ex lead designer <a href="#">@69pixels</a>
+      </div>
+    </div>
+    <div class="hero__showreel-wrapper">
+      <div class="showreel-control">
+        <button class="showreel-play" onclick="videoPopup()" onmouseover="loadVideo()">
+          <span class="showreel-button-label">Play</span>
+          <span class="showreel-button-background"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/showReelController.js"></script>
+  <script src="/videoController.js"></script>
+</body>
+
+</html>

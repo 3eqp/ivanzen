@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "MixalGX";
+  src: url("fonts/MixalGX.woff2") format("woff2");
+}
+
+/* @font-face {
+  font-family: "Array Regular";
+  src: url("fonts/Array-Regular.woff") format("woff"),
+       url("fonts/Array-Regular.woff2") format("woff2");
+} */
+
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("fonts/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+:root {
+  --main-bg-color: #100f0f;
+  --animation-speed--fast: 125ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: white;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/*  */
+
+
+
+.hero__container {
+  position: relative;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 300px;
+  column-gap: 30px;
+  padding: 50px
+}
+
+.hero__text-wrapper {
+  position: relative;
+  width: 100%;
+  grid-column: 1 / 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  position: relative;
+}
+
+.hero-text span {
+  width: 100%;
+  color: var(--white);
+  font-family: "MixalGX", system, sans-serif;
+  ;
+  font-variation-settings: "wght" 500;
+  font-size: 40vmax;
+  line-height: 0.8;
+  transition: font-variation-settings 250ms ease-out;
+  animation: 1s ease-out 0s 1 onloadTextAnimation;
+  transform: scale(1, 1.5);
+  -webkit-transform: scale(1, 1.5);
+}
+
+.collapse {
+  font-variation-settings: "wght" 100;
+}
+
+.hero-text:hover>span {
+  font-variation-settings: "wght" 600;
+}
+
+.hero-text:hover>.collapse {
+  font-variation-settings: "wght" 300;
+}
+
+@keyframes onloadTextAnimation {
+  0% {
+    font-variation-settings: "wght" 100;
+  }
+
+  100% {
+    font-variation-settings: "wght" 500;
+  }
+}
+
+.hero__about-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 1;
+}
+
+.hero__about-text {
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 30px;
+  text-align: right;
+  padding-bottom: 50px;
+  color: rgba(255, 255, 255, 0.4)
+}
+
+.hero__showreel-wrapper {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.showreel-control {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+
+.showreel-play {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  background-color: var(--main-bg-color);
+  height: 30vmax;
+  width: 30vmax;
+  transform: scale(1);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: var(--animation-speed--fast);
+  transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+}
+
+.showreel-play.active {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.showreel-button-label {
+  z-index: 1;
+  color: white;
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 50px;
+  transition-property: color, font-variation-settings, transform;
+  transition-duration: var(--animation-speed--fast);
+  transition-timing-function: ease-in-out;
+}
+
+.showreel-play:hover > .showreel-button-label {
+  color: #100f0f;
+  font-variation-settings: "wght" 600;
+  transform: rotate(25deg);
+}
+
+.showreel-button-background {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+  transform: scale(.965);
+  transition-property: transform, opacity;
+  transition-duration: var(--animation-speed--fast);
+  transition-timing-function: ease-in-out;
+}
+
+.showreel-play:hover > .showreel-button-background {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.videoCursorPopup {
+  position: absolute;
+  z-index: 999;
+  width: 50vmax;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--animation-speed--fast);
+  transition-timing-function: ease-in-out;
+}
+
+.videoCursorPopup.active {
+  pointer-events: auto;
+  cursor: none;
+  opacity: 1;
+}
+
+.popupVideo-wrapper {
+
+}
+
+.hero__popupVideo {
+  display: block;
+}
+
+.showreel-stop {
+  position: absolute;
+  cursor: none;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  opacity: 0.4;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  transition: opacity var(--animation-speed--fast) ease-in-out;
+}
+
+.showreel-stop.active {
+  opacity: 1;
+}
+
+.button-label {
+  color: white;
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 50px;
+}
+
+.screenOverlay {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity var(--animation-speed--fast) ease-in-out;
+}
+
+.screenOverlay.active {
+  opacity: 1;
+}
