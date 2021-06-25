@@ -3,12 +3,6 @@
   src: url("fonts/MixalGX.woff2") format("woff2");
 }
 
-/* @font-face {
-  font-family: "Array Regular";
-  src: url("fonts/Array-Regular.woff") format("woff"),
-       url("fonts/Array-Regular.woff2") format("woff2");
-} */
-
 @font-face {
   font-family: "ClashDisplay-Variable";
   src: url("fonts/ClashDisplay-Variable.ttf") format("truetype");
@@ -45,9 +39,9 @@ a {
 .hero__container {
   position: relative;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 300px;
+  grid-template: 1fr 1fr / 3fr minmax(350px, 1fr);
   column-gap: 30px;
-  padding: 50px
+  padding: 50px;
 }
 
 .hero__text-wrapper {
@@ -110,7 +104,7 @@ a {
 .hero__about-text {
   font-family: "ClashDisplay-Variable", system, sans-serif;
   font-variation-settings: "wght" 500;
-  font-size: 30px;
+  font-size: clamp(2vmax, 30px, 30px);
   text-align: right;
   padding-bottom: 50px;
   color: rgba(255, 255, 255, 0.4)
@@ -136,7 +130,7 @@ a {
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 100%;
-  background-color: var(--main-bg-color);
+  background-color: rgba(255, 255, 255, 0);
   height: 30vmax;
   width: 30vmax;
   transform: scale(1);
