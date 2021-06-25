@@ -11,6 +11,7 @@
 :root {
   --main-bg-color: #100f0f;
   --animation-speed--fast: 125ms;
+  --animation-speed--mid: 300ms;
 }
 
 * {
@@ -34,7 +35,10 @@ a {
 
 /*  */
 
-
+main {
+  max-width: 2560px;
+  margin: 0 auto;
+}
 
 .hero__container {
   position: relative;
@@ -61,12 +65,13 @@ a {
   width: 100%;
   color: var(--white);
   font-family: "MixalGX", system, sans-serif;
-  ;
   font-variation-settings: "wght" 500;
   font-size: 40vmax;
   line-height: 0.8;
   transition: font-variation-settings 250ms ease-out;
+  -webkit-transition: font-variation-settings 250ms ease-out;
   animation: 1s ease-out 0s 1 onloadTextAnimation;
+  -webkit-animation: 1s ease-out 0s 1 onloadTextAnimation;
   transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
 }
@@ -107,7 +112,7 @@ a {
   font-size: clamp(2vmax, 30px, 30px);
   text-align: right;
   padding-bottom: 50px;
-  color: rgba(255, 255, 255, 0.4)
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .hero__showreel-wrapper {
@@ -134,14 +139,19 @@ a {
   height: 30vmax;
   width: 30vmax;
   transform: scale(1);
+  -webkit-transform: scale(1);
   opacity: 1;
   transition-property: transform, opacity;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+  -webkit-transition-property: transform, opacity;
+  -webkit-transition-duration: var(--animation-speed--fast);
+  -webkit-transition-timing-function: cubic-bezier(.43,1.09,.99,1);
 }
 
 .showreel-play.active {
   transform: scale(0.7);
+  -webkit-transform: scale(0.7);
   opacity: 0;
 }
 
@@ -154,12 +164,16 @@ a {
   transition-property: color, font-variation-settings, transform;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: ease-in-out;
+  -webkit-transition-property: color, font-variation-settings, transform;
+  -webkit-transition-duration: var(--animation-speed--fast);
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 .showreel-play:hover > .showreel-button-label {
   color: #100f0f;
   font-variation-settings: "wght" 600;
   transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
 }
 
 .showreel-button-background {
@@ -176,6 +190,10 @@ a {
   transition-property: transform, opacity;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: ease-in-out;
+  -webkit-transform: scale(.965);
+  -webkit-transition-property: transform, opacity;
+  -webkit-transition-duration: var(--animation-speed--fast);
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 .showreel-play:hover > .showreel-button-background {
@@ -188,11 +206,15 @@ a {
   z-index: 999;
   width: 50vmax;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0;
   transition-property: opacity;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: ease-in-out;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: var(--animation-speed--fast);
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 .videoCursorPopup.active {
@@ -219,6 +241,8 @@ a {
   background-color: transparent;
   transform: translate(-50%, -50%);
   transition: opacity var(--animation-speed--fast) ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transition: opacity var(--animation-speed--fast) ease-in-out;
 }
 
 .showreel-stop.active {
@@ -241,8 +265,118 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity var(--animation-speed--fast) ease-in-out;
+  -webkit-transition: opacity var(--animation-speed--fast) ease-in-out;
 }
 
 .screenOverlay.active {
   opacity: 1;
+}
+
+
+/* WORKS */
+
+
+.works__container {
+  position: relative;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+  gap: 20px 20px;
+  padding: 2vmax 50px 50px 50px;
+}
+
+.project-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-wrapper.col-3 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 1;
+}
+
+.project__image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.project__image {
+  width: 100%;
+  transition-duration: var(--animation-speed--mid);
+  transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+  -webkit-transition-duration: var(--animation-speed--mid);
+  -webkit-transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+}
+
+.project-wrapper:hover > .project__image-wrapper > a > .project__image {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+}
+
+.project-wrapper:hover > .project__info-wrapper {
+  opacity: 1;
+  top: 20px;
+}
+
+.project__info-wrapper {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  top: 0;
+  opacity: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  background-color: var(--main-bg-color);
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 30px 40px 30px 40px;
+  justify-content: space-between;
+  transition-duration: var(--animation-speed--mid);
+  transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+  -webkit-transition-duration: var(--animation-speed--mid);
+  -webkit-transition-timing-function: cubic-bezier(.43,1.09,.99,1);
+}
+
+.info__about-wrapper {
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 30px;
+  text-align: left;
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+.info__project-name {
+  margin-right: 15px;
+}
+
+.info__project-year {
+  opacity: 0.4;
+}
+
+.info__actions-wrapper {
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 30px;
+  text-align: right;
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+.info__view-wrapper {
+  opacity: 0.4;
+  margin-right: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info__view-wrapper span {
+  margin-left: 5px;
+}
+
+.info__visit-wrapper {
+
 }
