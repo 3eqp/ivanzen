@@ -40,6 +40,46 @@ main {
   margin: 0 auto;
 }
 
+.floating-logo {
+  position: fixed;
+  max-width: 160px;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  padding: 20px 30px 20px 30px;
+  border-radius: 100px;
+  z-index: 999;
+}
+
+.logo__text-wrapper {
+  width: 100%;
+}
+
+.logo-text {
+  color: var(--white);
+  font-family: "MixalGX", system, sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: 60px;
+  line-height: 0.8;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  transition: font-variation-settings 250ms ease-out;
+  -webkit-transition: font-variation-settings 250ms ease-out;
+}
+
+.logo-text .collapse {
+  font-variation-settings: "wght" 160;
+}
+
+.logo-text:hover>span {
+  font-variation-settings: "wght" 230;
+}
+
+.logo-text:hover>.expand {
+  font-variation-settings: "wght" 700;
+}
+
 .hero__container {
   position: relative;
   display: grid;
@@ -312,8 +352,6 @@ main {
 .col-5 {
   grid-column: 1 / 4;
 }
-
-
 
 .project__image-wrapper {
   position: relative;

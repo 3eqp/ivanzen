@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Ivan Zenkovich – Digital Designer</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,21 @@
   </div>
   <div class="screenOverlay"></div>
 
-  <main>
+  <div class="floating-logo">
+    <a class="logo__text-wrapper">
+      <a class="logo-text">
+        <span class="collapse expand">I</span>
+        <span class="">V</span>
+        <span class="collapse">A</span>
+        <span class="collapse">N&nbsp;</span>
+        <span class="collapse expand">Z</span>
+        <span class="collapse">E</span>
+        <span>N</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="main__container">
     <section class="hero__container">
       <div class="hero__text-wrapper">
         <div class="hero-text">
@@ -36,6 +51,7 @@
           <span>N</span>
         </div>
       </div>
+      
       <div class="hero__about-wrapper">
         <div class="hero__about-text">I’m Ivan Zenkovich,<br>a digital designer who looks for new ways to improve life
           through digital products</div>
@@ -101,74 +117,61 @@
         </div>
       </div>
 
-      <div class="project-wrapper col-2">
+      <div class="project-wrapper col-5">
         <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img srcset="/img/Tripyacht.jpg 1x, /img/Tripyacht@2x.jpg 2x" alt="AskMom project" loading="lazy"
+          <a href="https//69pixels.com" target="_blank" rel="noopener noreferrer">
+            <img srcset="/img/69pixels.jpg 1x, /img/69pixels@2x.jpg 2x" alt="69pixels project" loading="lazy"
               class="project__image">
           </a>
         </div>
         <div class="project__info-wrapper">
           <div class="info__about-wrapper">
-            <div class="info__project-name">AskMom</div>
-            <div class="info__project-year">2021</div>
+            <div class="info__project-name">69pixels</div>
+            <div class="info__project-year">2017-2020</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-wrapper col-2">
+        <div class="project__image-wrapper">
+          <a href="https://tripyacht.com" target="_blank" rel="noopener noreferrer">
+            <img srcset="/img/Tripyacht.jpg 1x, /img/Tripyacht@2x.jpg 2x" alt="Tripyacht project" loading="lazy"
+              class="project__image">
+          </a>
+        </div>
+        <div class="project__info-wrapper">
+          <div class="info__about-wrapper">
+            <div class="info__project-name">Tripyacht</div>
+            <div class="info__project-year">2020</div>
           </div>
         </div>
       </div>
 
       <div class="project-wrapper col-4">
         <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img srcset="/img/Baby.jpg 1x, /img/Baby@2x.jpg 2x" alt="AskMom project" loading="lazy"
+          <a href="https://baby.ru" target="_blank" rel="noopener noreferrer">
+            <img srcset="/img/Baby.jpg 1x, /img/Baby@2x.jpg 2x" alt="Baby.ru project" loading="lazy"
               class="project__image">
           </a>
         </div>
         <div class="project__info-wrapper">
           <div class="info__about-wrapper">
-            <div class="info__project-name">AskMom</div>
-            <div class="info__project-year">2021</div>
+            <div class="info__project-name">Baby.ru</div>
+            <div class="info__project-year">2019</div>
           </div>
         </div>
       </div>
 
-      <div class="project-wrapper col-1">
-        <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img srcset="/img/Spa.jpg 1x, /img/Spa@2x.jpg 2x" alt="AskMom project" loading="lazy"
-              class="project__image">
-          </a>
-        </div>
-        <div class="project__info-wrapper">
-          <div class="info__about-wrapper">
-            <div class="info__project-name">AskMom</div>
-            <div class="info__project-year">2021</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-wrapper col-3">
-        <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img srcset="/img/69pixels.jpg 1x, /img/69pixels@2x.jpg 2x" alt="AskMom project" loading="lazy"
-              class="project__image">
-          </a>
-        </div>
-        <div class="project__info-wrapper">
-          <div class="info__about-wrapper">
-            <div class="info__project-name">AskMom</div>
-            <div class="info__project-year">2021</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    
+
 
 
   </main>
 
   <script src="/showReelController.js"></script>
   <script src="/videoController.js"></script>
+  <script src="/scrollController.js"></script>
 </body>
 
 </html>
