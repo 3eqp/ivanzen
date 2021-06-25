@@ -43,12 +43,20 @@ main {
 .floating-logo {
   position: fixed;
   max-width: 160px;
-  top: 20px;
+  top: 10px;
   left: 20px;
   background-color: black;
   padding: 20px 30px 20px 30px;
   border-radius: 100px;
   z-index: 999;
+  opacity: 0;
+  transition: all var(--animation-speed--mid) ease-in-out;
+  -webkit-transition: all var(--animation-speed--mid) ease-in-out;
+}
+
+.floating-logo.active {
+  top: 20px;
+  opacity: 1;
 }
 
 .logo__text-wrapper {
