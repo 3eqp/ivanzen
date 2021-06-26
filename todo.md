@@ -4,4 +4,4 @@
 -4. Show all works on Works button hover
 5. Add footer
 6. Arrow icon for all 'a' links
-7. Change color on Works hover
++7. Change color on Works hover

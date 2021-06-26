@@ -6,6 +6,7 @@
   <title>Ivan Zenkovich – Digital Designer</title>
   <link rel="stylesheet" href="./style.css">
   <script src="/jquery-3.6.0.min.js"></script>
+  <script src="/script.js"></script>
 </head>
 
 <body>
@@ -43,16 +44,16 @@
         <div class="hero__about-text">I’m Ivan Zenkovich,<br>a digital designer who looks for new ways to improve life
           through digital products</div>
         <div class="hero__about-text">
-          cpo <a href="#">@skich</a>
+          cpo <a href="https://skich.app" target="_blank">@skich</a>
           <br>
-          ex lead designer <a href="#">@69pixels</a>
+          ex lead designer <a href="https://69pixels.com" target="_blank">@69pixels</a>
         </div>
       </div>
       <div class="hero__works-wrapper">
         <div class="works-control">
           <button class="works-button">
             <span class="works-button-label">Works</span>
-            <span class="works-button-background"></span>
+            <span class="works-button-background" onmouseout="changeColor()"></span>
             <span class="hero-background"></span>
           </button>
         </div>
@@ -62,7 +63,7 @@
     <section class="works__container">
       <div class="project-wrapper col-5">
         <div class="project__image-wrapper">
-          <a href="https://skich.app" target="_blank" rel="noopener noreferrer">
+          <a href="https://skich.app" target="_blank"></a>
             <img srcset="/img/Skich.jpg 1x, /img/Skich@2x.jpg 2x" alt="Skich project" loading="lazy"
               class="project__image">
           </a>
@@ -77,7 +78,7 @@
 
       <div class="project-wrapper col-1">
         <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank">
             <img srcset="/img/AskMom.jpg 1x, /img/AskMom@2x.jpg 2x" alt="AskMom project" loading="lazy"
               class="project__image">
           </a>
@@ -92,7 +93,7 @@
 
       <div class="project-wrapper col-3">
         <div class="project__image-wrapper">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank">
             <img srcset="/img/Anki.jpg 1x, /img/Anki@2x.jpg 2x" alt="AnkiPro project" loading="lazy"
               class="project__image">
           </a>
@@ -107,7 +108,7 @@
 
       <div class="project-wrapper col-2">
         <div class="project__image-wrapper">
-          <a href="https://tripyacht.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://tripyacht.com" target="_blank">
             <img srcset="/img/Tripyacht.jpg 1x, /img/Tripyacht@2x.jpg 2x" alt="Tripyacht project" loading="lazy"
               class="project__image">
           </a>
@@ -122,7 +123,7 @@
 
       <div class="project-wrapper col-4">
         <div class="project__image-wrapper">
-          <a href="https://baby.ru" target="_blank" rel="noopener noreferrer">
+          <a href="https://baby.ru" target="_blank">
             <img srcset="/img/Baby.jpg 1x, /img/Baby@2x.jpg 2x" alt="Baby.ru project" loading="lazy"
               class="project__image">
           </a>
@@ -137,7 +138,7 @@
 
       <div class="project-wrapper col-5">
         <div class="project__image-wrapper">
-          <a href="https//69pixels.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://69pixels.com" target="_blank">
             <img srcset="/img/69pixels.jpg 1x, /img/69pixels@2x.jpg 2x" alt="69pixels project" loading="lazy"
               class="project__image">
           </a>
@@ -152,7 +153,7 @@
 
       <div class="project-wrapper col-2">
         <div class="project__image-wrapper">
-          <a href="https://cosmodrome.pro" target="_blank" rel="noopener noreferrer">
+          <a href="https://cosmodrome.pro" target="_blank">
             <img srcset="/img/Cosmodrome.jpg 1x, /img/Cosmodrome@2x.jpg 2x" alt="Cosmodrome project" loading="lazy"
               class="project__image">
           </a>
@@ -167,14 +168,14 @@
 
       <div class="project-wrapper col-4">
         <div class="project__image-wrapper">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank">
             <img srcset="/img/SPA.jpg 1x, /img/SPA@2x.jpg 2x" alt="SPA project" loading="lazy"
               class="project__image">
           </a>
         </div>
         <div class="project__info-wrapper">
           <div class="info__about-wrapper">
-            <div class="info__project-name">SPA Project</div>
+            <div class="info__project-name">SPA</div>
             <div class="info__project-year">design</div>
           </div>
         </div>
@@ -187,7 +188,20 @@
 
   </main>
 
+  <footer class="footer__container">
+    <div class="footer__text-wrapper">
+      <span class="footer__text">find me on</span>
+      <a href="https://dribbble.com/bqzen" class="footer__link">Dribbble</a>
+      <a href="https://www.instagram.com/bqzen/" class="footer__link">Instagram</a>
+      <a href="https://www.linkedin.com/in/3eqp/" class="footer__link">Linkedin</a>
+    </div>
+    <div class="footer__caption-wrapper">
+      <span class="footer__caption">eat 🍕 and have fun</span>
+    </div>
+  </footer>
+
   <script src="/scrollController.js"></script>
+  <script src="/worksController.js"></script>
 </body>
 
 </html>

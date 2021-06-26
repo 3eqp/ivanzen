@@ -72,8 +72,8 @@ main {
   display: flex;
   width: 100%;
   cursor: pointer;
-  transition: font-variation-settings 250ms ease-out;
-  -webkit-transition: font-variation-settings 250ms ease-out;
+  transition: none;
+  -webkit-transition: none;
 }
 
 .logo-text .collapse {
@@ -180,7 +180,7 @@ main {
 
 .works-control {
   position: absolute;
-  bottom: 40px;
+  bottom: 2vmax;
   right: 0;
 }
 
@@ -268,14 +268,14 @@ main {
   height: 100%;
   opacity: 0;
   pointer-events: none;
-  background-color: #5A40C3;
+  background-color: hsla(252, 52%, 51%, 1);
   border-radius: 100%;
   transform: scale(.965);
   transition-property: transform, opacity;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: ease-in-out;
   -webkit-transform: scale(.965);
-  -webkit-transition-property: transform, opacity;
+  -webkit-transition-property: transform, opacity, background-color;
   -webkit-transition-duration: var(--animation-speed--fast);
   -webkit-transition-timing-function: ease-in-out;
   z-index: 0;
@@ -396,3 +396,56 @@ main {
 }
 
 /*  */
+
+
+.footer__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 2vmax 50px 50px 50px;
+}
+
+.footer__text-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 10vmax;
+  line-height: 0.9;
+}
+
+.footer__text {
+  color: white;
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+a {
+  color: white;
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-variation-settings: "wght" 500;
+  transition-property: font-variation-settings;
+  transition-duration: var(--animation-speed--fast);
+  transition-timing-function: ease-in;
+  -webkit-transition-property: font-variation-settings;
+  -webkit-transition-duration: var(--animation-speed--fast);
+  -webkit-transition-timing-function: ease-in;
+}
+
+a:hover {
+  font-variation-settings: "wght" 600;
+}
+
+.footer__caption {
+  color: white;
+  font-family: "ClashDisplay-Variable", system, sans-serif;
+  font-size: 20px;
+  font-variation-settings: "wght" 500;
+}
+
+
+
+
+
+
