@@ -163,19 +163,19 @@ main {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.hero__showreel-wrapper {
+.hero__works-wrapper {
   position: relative;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
-.showreel-control {
+.works-control {
   position: absolute;
   bottom: 40px;
   right: 0;
 }
 
-.showreel-play {
+.works-button {
   display: flex;
   cursor: pointer;
   text-align: center;
@@ -197,13 +197,13 @@ main {
   -webkit-transition-timing-function: cubic-bezier(.43,1.09,.99,1);
 }
 
-.showreel-play.active {
+.works-button.active {
   transform: scale(0.7);
   -webkit-transform: scale(0.7);
   opacity: 0;
 }
 
-.showreel-button-label {
+.works-button-label {
   z-index: 2;
   color: white;
   font-family: "ClashDisplay-Variable", system, sans-serif;
@@ -217,14 +217,14 @@ main {
   -webkit-transition-timing-function: ease-in-out;
 }
 
-.showreel-play:hover > .showreel-button-label {
+.works-button:hover > .works-button-label {
   color: #100f0f;
   font-variation-settings: "wght" 600;
   transform: rotate(25deg);
   -webkit-transform: rotate(25deg);
 }
 
-.showreel-button-background {
+.works-button-background {
   display: block;
   position: absolute;
   top: 0;
@@ -245,80 +245,36 @@ main {
   z-index: 1;
 }
 
-.showreel-play:hover > .showreel-button-background {
+.works-button:hover > .works-button-background {
   opacity: 1;
   transform: scale(1);
 }
 
-.videoCursorPopup {
+.hero-background {
+  display: block;
   position: absolute;
-  z-index: 999;
-  width: 50vmax;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  transition-property: opacity;
+  pointer-events: none;
+  background-color: #5A40C3;
+  border-radius: 100%;
+  transform: scale(.965);
+  transition-property: transform, opacity;
   transition-duration: var(--animation-speed--fast);
   transition-timing-function: ease-in-out;
-  -webkit-transition-property: opacity;
+  -webkit-transform: scale(.965);
+  -webkit-transition-property: transform, opacity;
   -webkit-transition-duration: var(--animation-speed--fast);
   -webkit-transition-timing-function: ease-in-out;
+  z-index: 0;
 }
 
-.videoCursorPopup.active {
-  pointer-events: auto;
-  cursor: none;
+.works-button:hover > .hero-background {
   opacity: 1;
-}
-
-.popupVideo-wrapper {
-
-}
-
-.hero__popupVideo {
-  display: block;
-}
-
-.showreel-stop {
-  position: absolute;
-  cursor: none;
-  top: 50%;
-  left: 50%;
-  border: 0;
-  opacity: 0.4;
-  background-color: transparent;
-  transform: translate(-50%, -50%);
-  transition: opacity var(--animation-speed--fast) ease-in-out;
-  -webkit-transform: translate(-50%, -50%);
-  -webkit-transition: opacity var(--animation-speed--fast) ease-in-out;
-}
-
-.showreel-stop.active {
-  opacity: 1;
-}
-
-.button-label {
-  color: white;
-  font-family: "ClashDisplay-Variable", system, sans-serif;
-  font-variation-settings: "wght" 500;
-  font-size: 50px;
-}
-
-.screenOverlay {
-  position: fixed;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity var(--animation-speed--fast) ease-in-out;
-  -webkit-transition: opacity var(--animation-speed--fast) ease-in-out;
-}
-
-.screenOverlay.active {
-  opacity: 1;
+  transform: scale(100);
 }
 
 
@@ -435,30 +391,3 @@ main {
 }
 
 /*  */
-
-.hero-background {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  background-color: #5A40C3;
-  border-radius: 100%;
-  transform: scale(.965);
-  transition-property: transform, opacity;
-  transition-duration: var(--animation-speed--fast);
-  transition-timing-function: ease-in-out;
-  -webkit-transform: scale(.965);
-  -webkit-transition-property: transform, opacity;
-  -webkit-transition-duration: var(--animation-speed--fast);
-  -webkit-transition-timing-function: ease-in-out;
-  z-index: 0;
-}
-
-.showreel-play:hover > .hero-background {
-  opacity: 1;
-  transform: scale(100);
-}

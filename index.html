@@ -9,19 +9,6 @@
 </head>
 
 <body>
-  <div class="videoCursorPopup">
-    <div class="popupVideo-wrapper">
-      <button class="showreel-stop">
-        <span class="button-label">Stop</span>
-      </button>
-      <video class="hero__popupVideo" width="100%" playsinline onended="videoEnd()">
-        <source src="https://www.dropbox.com/s/6mafgvrdvxy8vqs/TempVid.mp4?raw=1" type="video/mp4">
-      </video>
-
-    </div>
-  </div>
-  <div class="screenOverlay"></div>
-
   <div class="floating-logo">
     <a class="logo__text-wrapper">
       <a class="logo-text">
@@ -61,11 +48,11 @@
           ex lead designer <a href="#">@69pixels</a>
         </div>
       </div>
-      <div class="hero__showreel-wrapper">
-        <div class="showreel-control">
-          <button class="showreel-play" onclick="videoPopup()" onmouseover="loadVideo()">
-            <span class="showreel-button-label">Play</span>
-            <span class="showreel-button-background"></span>
+      <div class="hero__works-wrapper">
+        <div class="works-control">
+          <button class="works-button">
+            <span class="works-button-label">Works</span>
+            <span class="works-button-background"></span>
             <span class="hero-background"></span>
           </button>
         </div>
@@ -170,8 +157,6 @@
 
   </main>
 
-  <script src="/showReelController.js"></script>
-  <script src="/videoController.js"></script>
   <script src="/scrollController.js"></script>
 </body>
 
