@@ -12,8 +12,7 @@ $(document).ready(function () {
                 logo.addClass('active');
             }
             lastScrollTop = st;
-        }
-        else {
+        } else {
             logo.removeClass('active');
         }
     });
@@ -26,6 +25,11 @@ $(document).ready(function () {
         return false;
     });
 
-
+    $('.works-button').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('.works__container').offset().top
+        });
+        return false;
+    });
 
 });
