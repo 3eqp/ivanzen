@@ -603,7 +603,7 @@ main {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .hero__container {
     column-gap: 20px;
     padding: 30px;
