@@ -381,16 +381,6 @@ main {
   top: 20px;
 }
 
-.project-wrapper:active > .project__image-wrapper > a > .project__image {
-  transform: scale(1.01);
-  -webkit-transform: scale(1.01);
-}
-
-.project-wrapper:active > .project__info-wrapper {
-  opacity: 1;
-  top: 20px;
-}
-
 .project__info-wrapper {
   position: absolute;
   display: flex;
