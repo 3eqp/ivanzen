@@ -55,6 +55,7 @@ a:hover {
 main {
   max-width: 2560px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .floating-logo {
@@ -416,7 +417,6 @@ main {
 }
 
 .info__project-name {
-  margin-right: 15px;
   font-family: "MixalGX", system, sans-serif;
   font-variation-settings: "wght" 200;
   font-size: 200px;
