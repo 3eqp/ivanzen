@@ -469,21 +469,22 @@ main {
 
 
 
-
 @media screen and (max-width: 1440px) {
+  .hero__container {
+    grid-template: 1fr 1fr / 3fr minmax(400px, 1fr);
+  }
+
   .hero-text span {
     font-size: 35vmax;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .hero-text span {
-    font-size: 33vmax;
     line-height: 0.9;
   }
 
+  .hero__about-wrapper {
+    padding: 30px 30px 0 0;
+  }
+
   .hero__about-text {
-    font-size: 2.4vmax;
+    font-size: 2.2vmax;
     padding-bottom: 50px;
   }
 }
@@ -620,10 +621,6 @@ main {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: aqua;
-  }
-  
   .hero__container {
     column-gap: 20px;
     padding: 30px 30px 10px 30px;
