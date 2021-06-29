@@ -371,12 +371,12 @@ main {
   -webkit-transition-timing-function: cubic-bezier(.43,1.09,.99,1);
 }
 
-.project-wrapper:hover > .project__image-wrapper > a > .project__image {
+.project-wrapper a:hover > .project__image-wrapper > .project__image {
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
 }
 
-.project-wrapper:hover > .project__info-wrapper {
+.project-wrapper a:hover > .project__info-wrapper {
   opacity: 1;
   top: 20px;
 }
