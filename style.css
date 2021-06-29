@@ -624,7 +624,7 @@ main {
 @media screen and (max-width: 480px) {
   .hero__container {
     column-gap: 20px;
-    padding: 30px 30px 10px 30px;
+    padding: 30px 20px 10px 20px;
   }
 
   .hero__text-wrapper {
@@ -635,7 +635,8 @@ main {
   }
 
   .hero__about-wrapper {
-    padding: 30px 0 30px 0;
+    padding: 30px 0 20px 0;
+    grid-column: 1 / 4;
   }
 
   .hero__about-text {
@@ -656,7 +657,7 @@ main {
   .works__container {
     grid-template: repeat(8, auto) / 100%;
     gap: 20px 20px;
-    padding: 0 30px 30px 30px;
+    padding: 0 20px 20px 20px;
   }
 
   .col-1, .col-2, .col-3, .col-4, .col-5 {
@@ -677,7 +678,7 @@ main {
 
   .footer__container {
     gap: 30px;
-    padding: 2vmax 30px 50px 30px;
+    padding: 2vmax 20px 40px 20px;
   }
 
   .footer__text-wrapper {
