@@ -239,6 +239,7 @@ main {
 
 .works-button-label {
   z-index: 2;
+  pointer-events: none;
   color: white;
   font-family: "ClashDisplay-Variable", system, sans-serif;
   font-variation-settings: "wght" 500;
