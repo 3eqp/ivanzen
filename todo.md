@@ -6,3 +6,4 @@
 -6. Arrow icon for all 'a' links
 +7. Change color on Works hover
 8. Rewrite code using SASS and BEM
+9. Fix project hovers for iPhone
